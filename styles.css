@@ -1,20 +1,22 @@
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  display: flex;
-  height: 100vh;
   background-color: #0d0070;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
+/* Página de login */
 .login-container {
-  margin: auto;
-  text-align: center;
-  background: #05002b;
+  background-color: #05002b;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-  width: 350px;
+  text-align: center;
+  width: 340px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .logo {
@@ -22,32 +24,38 @@ body {
   margin-bottom: 20px;
 }
 
-input[type="password"] {
+input {
   width: 100%;
   padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
   border: none;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  outline: none;
+  font-size: 1rem;
 }
 
 button {
-  background: #00b7ff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 20px;
-  cursor: pointer;
   width: 100%;
-  font-weight: 600;
+  background: #00b7ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
   transition: background 0.3s;
 }
 
 button:hover {
-  background: #009de0;
+  background: #00d0ff;
 }
 
-/* Painel de aulas */
+p {
+  margin-top: 15px;
+  color: #b3b3ff;
+  font-size: 0.9rem;
+}
+
+/* Página de aulas */
 .sidebar {
   width: 280px;
   background-color: #05002b;
