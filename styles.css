@@ -11,7 +11,7 @@ body {
 
 /* Página de login */
 .login-container {
-  background-color: #05002b;
+  background-color: #040026;
   padding: 40px;
   border-radius: 12px;
   text-align: center;
@@ -58,7 +58,7 @@ p {
 /* Página de aulas */
 .sidebar {
   width: 280px;
-  background-color: #05002b;
+  background-color: #040026;
   padding: 20px;
   overflow-y: auto;
   display: flex;
