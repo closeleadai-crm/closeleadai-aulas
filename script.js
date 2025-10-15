@@ -1,38 +1,39 @@
-// ===== CONFIGURAÇÃO =====
-const SENHA_CORRETA = "CloseLead2025";
-
-// ===== LOGIN =====
 function login() {
   const senha = document.getElementById("senha").value;
-  const erro = document.getElementById("erro");
+  const senhaCorreta = "closelead"; // altere conforme sua senha
 
-  if (senha === SENHA_CORRETA) {
-    localStorage.setItem("autenticado", "true");
+  if (senha === senhaCorreta) {
+    localStorage.setItem("auth", "true");
     window.location.href = "aulas.html";
   } else {
-    erro.textContent = "Senha incorreta. Tente novamente.";
+    alert("Senha incorreta! Tente novamente.");
   }
 }
 
-// ===== PROTEÇÃO DE PÁGINA =====
+// Bloqueio de acesso sem login
 if (window.location.pathname.includes("aulas.html")) {
-  const autorizado = localStorage.getItem("autenticado");
-  if (!autorizado) {
+  if (localStorage.getItem("auth") !== "true") {
     window.location.href = "index.html";
   }
 }
 
-// ===== TROCAR AULA =====
-function trocarAula(id, titulo) {
-  const iframe = document.getElementById("videoPlayer");
-  const title = document.getElementById("tituloAula");
-  iframe.src = `https://drive.google.com/uc?export=preview&id=${id}`;
-  title.innerText = titulo;
-  window.scrollTo({ top: 0, behavior: "smooth" });
+function loadVideo(url) {
+  const iframe = document.getElementById("videoFrame");
+  iframe.src = url;
+  localStorage.setItem("ultimaAula", url);
 }
 
-// ===== LOGOUT =====
 function logout() {
-  localStorage.removeItem("autenticado");
+  localStorage.removeItem("auth");
+  localStorage.removeItem("ultimaAula");
   window.location.href = "index.html";
 }
+
+// Retomar última aula assistida
+window.onload = () => {
+  const ultima = localStorage.getItem("ultimaAula");
+  if (ultima) {
+    const iframe = document.getElementById("videoFrame");
+    if (iframe) iframe.src = ultima;
+  }
+};
