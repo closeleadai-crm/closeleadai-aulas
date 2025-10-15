@@ -1,6 +1,6 @@
 function login() {
   const senha = document.getElementById("senha").value;
-  const senhaCorreta = "closelead"; // altere conforme sua senha
+  const senhaCorreta = "CloseLead2025"; // altere conforme sua senha
 
   if (senha === senhaCorreta) {
     localStorage.setItem("auth", "true");
