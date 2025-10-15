@@ -3,33 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aulas CloseLeadAI</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Painel de Aulas - CloseLeadAI</title>
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <img src="assets/logo.png" alt="CloseLeadAI" class="logo-header" />
-    </div>
-    <h1>📚 Aulas do CloseLeadAI</h1>
-    <button class="logout" onclick="logout()">Sair</button>
-  </header>
+  <div class="sidebar">
+    <div class="top-section">
+      <img src="/logo.png" alt="Logo" class="logo" />
+      <h2>Módulo 1 — Introdução</h2>
+      <ul>
+        <li><a href="#" onclick="loadVideo('https://fast.wistia.net/embed/iframe/akhwfg6wbt')">Aula 01 – Overview Geral</a></li>
+      </ul>
 
-  <main>
-    <div class="video-container">
-      <h2 id="tituloAula">Aula 05 – Passo 3 Agente de IA</h2>
-      <iframe id="videoPlayer"
-        src="https://drive.google.com/uc?export=preview&id=1filZ_G8-b8RzDEMCfwbHTXTCIYk8iSN0"
-        allowfullscreen>
-      </iframe>
+      <h2>Módulo 2 — Configurações</h2>
+      <ul>
+        <li><a href="#" onclick="loadVideo('https://www.youtube.com/embed/3Vb0yhil4-A')">Aula 02 – Configuração Inicial</a></li>
+        <li><a href="#" onclick="loadVideo('https://fast.wistia.net/embed/iframe/f3gnqou1m4')">Aula 05 – Conectando seu WhatsApp</a></li>
+        <li><a href="#" onclick="loadVideo('https://www.youtube.com/embed/Y1Fa5b3HgEg')">Aula 06 – Configuração Final</a></li>
+      </ul>
+
+      <h2>Módulo 3 — Automação e IA</h2>
+      <ul>
+        <li><a href="#" onclick="loadVideo('https://www.youtube.com/embed/6BeSM56mNkg')">Aula 03 – Automação e IA</a></li>
+        <li><a href="#" onclick="loadVideo('https://www.youtube.com/embed/ZA_z7dV-qBM')">Aula 04 – Agente de IA</a></li>
+        <li><a href="#" onclick="loadVideo('https://fast.wistia.net/embed/iframe/dahtvw8gd3')">Aula 07 – Teste Final</a></li>
+      </ul>
     </div>
 
-    <div class="playlist">
-      <button onclick="trocarAula('1filZ_G8-b8RzDEMCfwbHTXTCIYk8iSN0', 'Aula 05 – Passo 3 Agente de IA')">Aula 05 – Passo 3 Agente de IA</button>
-      <button onclick="trocarAula('1BiHRJdSA-QAVklhbQydFvDK3dytqJ8ne', 'Aula 08 – Teste Final')">Aula 08 – Teste Final</button>
-    </div>
-  </main>
+    <button class="logout-btn" onclick="logout()">Sair</button>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="content">
+    <h1>Bem-vindo(a) às Aulas CloseLeadAI</h1>
+    <p>Selecione uma aula no menu ao lado para começar.</p>
+    <iframe id="videoFrame" src="" allowfullscreen></iframe>
+  </div>
+
+  <script src="/script.js"></script>
 </body>
 </html>
