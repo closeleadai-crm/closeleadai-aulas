@@ -1,0 +1,8 @@
+closeleadai-aulas/
+├── index.html
+├── aulas.html
+├── styles.css
+├── script.js
+└── assets/
+    ├── logo.png
+    └── favicon.ico

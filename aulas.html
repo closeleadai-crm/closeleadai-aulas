@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel de Aulas - CloseLeadAI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+</head>
+<body>
+  <div class="sidebar">
+    <div class="top-section">
+      <img src="assets/logo.png" alt="CloseLeadAI Logo" class="logo" />
+      <h2>Vídeo Aulas Configurações</h2>
+      <ul>
+        <li><a href="#" onclick="loadVideo('https://fast.wistia.net/embed/iframe/akhwfg6wbt')">Aula 01 – Overview Geral</a></li>
+        <li><a href="#" onclick="loadVideo('https://www.youtube.com/embed/3Vb0yhil4-A')">Aula 02 – Configuração Inicial</a></li>
+        <li><a href="#" onclick="loadVideo('https://www.youtube.com/embed/6BeSM56mNkg')">Aula 03 – Automação e IA</a></li>
+        <li><a href="#" onclick="loadVideo('https://www.youtube.com/embed/ZA_z7dV-qBM')">Aula 04 – Agente de IA</a></li>
+        <li><a href="#" onclick="loadVideo('https://fast.wistia.net/embed/iframe/f3gnqou1m4')">Aula 05 – Conectando seu WhatsApp</a></li>
+        <li><a href="#" onclick="loadVideo('https://www.youtube.com/embed/Y1Fa5b3HgEg')">Aula 06 – Configuração Final</a></li>
+        <li><a href="#" onclick="loadVideo('https://fast.wistia.net/embed/iframe/dahtvw8gd3')">Aula 07 – Teste Final</a></li>
+      </ul>
+    </div>
+    <button class="logout-btn" onclick="logout()">Sair</button>
+  </div>
+
+  <div class="content">
+    <h1>Bem-vindo(a) às Aulas CloseLeadAI</h1>
+    <p>Selecione uma aula no menu ao lado para começar.</p>
+    <iframe id="videoFrame" src="" allowfullscreen></iframe>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
